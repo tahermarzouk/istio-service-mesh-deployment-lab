@@ -1,3 +1,6 @@
+![istio](https://user-images.githubusercontent.com/61206375/206857158-0dd8c318-2169-40dc-9d76-b26fd7c48800.jpg)
+![istio2](https://user-images.githubusercontent.com/61206375/206857160-05346fd8-6683-40ba-8ad6-3a89be14db94.jpg)
+
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
 
 sudo install -o root -g root -m 0755 kustomize /usr/local/bin/kustomize
