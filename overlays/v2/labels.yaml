@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-a
+  namespace: default
+  labels:
+    app: ms-a
+    version: v2
+spec:
+  selector:
+    matchLabels:
+      app: ms-a
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: ms-a
+        version: v2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-b
+  namespace: ms-b-ns
+  labels:
+    app: ms-b
+    version: v2
+spec:
+  selector:
+    matchLabels:
+      app: ms-b
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: ms-b
+        version: v2

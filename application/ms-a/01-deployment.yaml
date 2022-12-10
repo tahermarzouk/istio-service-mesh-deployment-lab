@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-a
+  labels:
+    app: ms-a
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ms-a
+  template:
+    metadata:
+      labels:
+        app: ms-a
+    spec:
+      containers:
+      - name: ms-a
+        image: tahermarzouk/ms-a
+        ports:
+        - containerPort: 3000
+          name: express-port
+        env:
+          - name: MSB_HOST
+            value: "ms-b-service.ms-b-ns"
+          - name: MSB_PORT
+            value: "80" 
+
